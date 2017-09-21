@@ -1,0 +1,29 @@
+{
+  "name": "app-generator",
+  "version": "0.5.0",
+  "description": "Generate apps with electron",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunohl91/app-generator.git"
+  },
+  "keywords": [
+    "electron",
+    "node",
+    "app",
+    "generator",
+    "iframe"
+  ],
+  "author": "Bruno Leite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunohl91/app-generator/issues"
+  },
+  "homepage": "https://github.com/brunohl91/app-generator#readme",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
