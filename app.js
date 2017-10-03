@@ -15,8 +15,7 @@ app.on('window-all-closed', function() {
 // Defines main window
 let iframe;
 let ppapi;
-// let addr = 'https://video.letteldata.com.br/lettel/#!/entrar';
-let addr = 'http://convert.letteldata.com.br/portal/app/convert-presenca/agenda.php';
+let addr = 'CHANGE-ME';
 
 // Flash Path
 if (process.platform  == 'win32') { // Windows
