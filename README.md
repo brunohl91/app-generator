@@ -37,9 +37,9 @@ Change these lines/icons according to your app
   });
 ```
 
-Run electron-packager
+Run electron-packager (change APPNAME, platform and arch to match your needs)
 ```
-electron-packager . "Convert-Video-$NOMECLIENTE" --platform=win32 --arch=ia32
+electron-packager . "Convert-Video-$NOMECLIENTE" --platform=win32 --arch=ia32 icon=./img/icon.ico
 ```
 
 After you can use Enigma (http://enigmaprotector.com/en/aboutvb.html) to generate a Portable executable.
