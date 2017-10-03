@@ -15,7 +15,7 @@ app.on('window-all-closed', function() {
 // Defines main window
 let iframe;
 let ppapi;
-let addr = 'CHANGE-ME';
+let addr = 'https://video.letteldata.com.br/lettel/#!/entrar?hide=true';
 
 // Flash Path
 if (process.platform  == 'win32') { // Windows

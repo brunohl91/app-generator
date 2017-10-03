@@ -12,16 +12,15 @@ npm install -g electron
 npm install -g electron-packager
 ```
 
-Clone repo
+Clone repo and install dependencies
 ```
 git clone https://github.com/brunohl91/app-generator.git
+npm install
 ```
 
-Open app.js
-
-Change this line
+Open app.js and change this line
 ```
-let addr = 'CHANGE-ME';
+let addr = 'https://video.letteldata.com.br/lettel/#!/entrar?hide=true';
 ```
 To
 ```
