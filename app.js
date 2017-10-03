@@ -2,7 +2,7 @@
 /**
  * Requires electron and path
  */
-const {app, BrowserWindow} = require('electron');
+const {app, globalShortcut, BrowserWindow} = require('electron');
 const path = require('path');
 
 // Stops app on close
@@ -13,18 +13,20 @@ app.on('window-all-closed', function() {
 });
 
 // Defines main window
-let mainWindow;
+let iframe;
 let ppapi;
+// let addr = 'https://video.letteldata.com.br/lettel/#!/entrar';
+let addr = 'http://convert.letteldata.com.br/portal/app/convert-presenca/agenda.php';
 
 // Flash Path
 if (process.platform  == 'win32') { // Windows
-  ppapi = path.join(__dirname, 'pepflashplayer-x86.dll');
+  ppapi = path.join(__dirname, '/resource/pepflashplayer-x86.dll');
 }
 else if (process.platform == 'linux') { // Linux
-  ppapi = path.join(__dirname, 'libpepflashplayer.so');
+  ppapi = path.join(__dirname, '/resource/libpepflashplayer.so');
 }
 else if (process.platform == 'darwin') { // Mac
-  ppapi = path.join(__dirname, 'PepperFlashPlayer.plugin');
+  ppapi = path.join(__dirname, '/resource/PepperFlashPlayer.plugin');
 }
 
 // Flags
@@ -33,12 +35,22 @@ app.commandLine.appendSwitch('ppapi-flash-version', '27.0.0.130');
 
 // On load
 app.on('ready', function() {
-  mainWindow = new BrowserWindow({
-    'width': 800,
-    'height': 600,
+
+  // Defines window
+  iframe = new BrowserWindow({
+    'title': 'Convert Video',
+    'icon': 'img/favicon.ico',
     'webPreferences': {
       'plugins': true
     }
   });
-  mainWindow.loadURL('https://video.letteldata.com.br/lettel/#!/entrar');
+
+  iframe.maximize();
+  iframe.loadURL( addr );
+
+  globalShortcut.register('F5', () => {
+    iframe.reload();
+  })
+
+
 });

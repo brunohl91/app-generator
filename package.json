@@ -3,8 +3,10 @@
   "version": "0.5.0",
   "description": "Generate apps with electron",
   "main": "app.js",
+  "productName": "App Generator",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,7 @@
     "url": "https://github.com/brunohl91/app-generator/issues"
   },
   "homepage": "https://github.com/brunohl91/app-generator#readme",
-  "devDependencies": {
+  "dependencies": {
     "electron": "~1.6.2"
   }
 }
